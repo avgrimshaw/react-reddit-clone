@@ -16,7 +16,7 @@ function ArticlesList() {
   return (
     <>
       {isLoading ? (
-        <h2 className="text-center mt-5 fw-bold">LOADING...</h2>
+        <h2 className="text-center mt-5 fw-bold">LOADING ...</h2>
       ) : (
         <div className="d-flex flex-column align-items-center">
           {articles.map(

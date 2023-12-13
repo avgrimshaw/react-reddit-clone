@@ -40,6 +40,7 @@ function ArticlesList() {
                   image_url={article_img_url}
                   votes={votes}
                   comment_count={comment_count}
+                  article_id={article_id}
                 />
               );
             }

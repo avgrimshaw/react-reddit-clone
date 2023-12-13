@@ -1,7 +1,4 @@
-import { Link } from "react-router-dom";
-import "./ArticleCard.css";
-
-function ArticleCard({
+function SelectedArticle({
   topic,
   author,
   created_at,
@@ -11,8 +8,6 @@ function ArticleCard({
   comment_count,
   article_id,
 }) {
-  const dateCreated = new Date(created_at);
-
   return (
     <div className="card mt-4">
       <div className="card-header d-flex justify-content-between">
@@ -27,9 +22,7 @@ function ArticleCard({
         </span>
       </div>
       <div className="card-body">
-        <Link to={`/${topic}/comments/${article_id}`}>
-          <h5 className="card-title">{title}</h5>
-        </Link>
+        <h5 className="card-title">{title}</h5>
         <img className="card-img mt-2" src={image_url} alt="article" />
       </div>
       <ul className="nav nav-pills card-footer d-flex justify-content-between align-items-center">
@@ -86,4 +79,4 @@ function ArticleCard({
   );
 }
 
-export default ArticleCard;
+export default SelectedArticle;

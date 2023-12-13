@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header/Header";
 import ArticlesList from "./components/ArticlesList";
+import ArticleSection from "./components/ArticleSection";
 
 function App() {
   return (
@@ -10,6 +11,10 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<ArticlesList />} />
+        <Route
+          path="/:topic/comments/:article_id"
+          element={<ArticleSection />}
+        />
       </Routes>
     </>
   );

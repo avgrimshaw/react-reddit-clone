@@ -7,3 +7,7 @@ const instance = axios.create({
 export const getArticles = () => {
   return instance.get("/articles").then(({ data }) => data);
 };
+
+export const getArticleById = (article_id) => {
+  return instance.get(`/articles/${article_id}`).then(({ data }) => data);
+};

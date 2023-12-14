@@ -9,7 +9,7 @@ function SelectedArticle({
   article_id,
 }) {
   return (
-    <div className="card mt-4">
+    <div className="card mt-2">
       <div className="card-header d-flex justify-content-between">
         <div className="d-flex gap-3">
           <span className="fw-bold" id="article-topic">

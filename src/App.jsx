@@ -11,10 +11,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<ArticlesList />} />
-        <Route
-          path="/:topic/comments/:article_id"
-          element={<ArticleSection />}
-        />
+        <Route path="/:topic/:article_id" element={<ArticleSection />} />
       </Routes>
     </>
   );

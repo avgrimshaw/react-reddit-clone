@@ -14,7 +14,7 @@ function ArticleCard({
   const dateCreated = new Date(created_at);
 
   return (
-    <div className="card mt-4">
+    <div className="card">
       <div className="card-header d-flex justify-content-between">
         <div className="d-flex gap-3">
           <span className="fw-bold" id="article-topic">
@@ -27,7 +27,7 @@ function ArticleCard({
         </span>
       </div>
       <div className="card-body">
-        <Link to={`/${topic}/comments/${article_id}`}>
+        <Link to={`/${topic}/${article_id}`}>
           <h5 className="card-title">{title}</h5>
         </Link>
         <img className="card-img mt-2" src={image_url} alt="article" />

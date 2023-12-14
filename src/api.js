@@ -11,3 +11,9 @@ export const getArticles = () => {
 export const getArticleById = (article_id) => {
   return instance.get(`/articles/${article_id}`).then(({ data }) => data);
 };
+
+export const getComments = (article_id) => {
+  return instance
+    .get(`/articles/${article_id}/comments`)
+    .then(({ data }) => data);
+};

@@ -22,7 +22,7 @@ function ArticleCard({
           </span>
           <span id="article-author">{author}</span>
         </div>
-        <span className="fw-bold" id="article-time">
+        <span className="fw-bold" id="article-age">
           1hr ago
         </span>
       </div>
@@ -32,7 +32,7 @@ function ArticleCard({
         </Link>
         <img className="card-img mt-2" src={image_url} alt="article" />
       </div>
-      <ul className="nav nav-pills card-footer d-flex justify-content-between align-items-center">
+      <ul className="card-footer nav nav-pills card-footer d-flex justify-content-between align-items-center">
         <li className="nav-item d-inline-flex align-items-center">
           <button className="btn btn-primary p-0">
             <svg

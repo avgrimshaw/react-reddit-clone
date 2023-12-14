@@ -8,7 +8,7 @@ function ArticlesList() {
 
   useEffect(() => {
     getArticles().then((data) => {
-      setArticles(data.articles);
+      setArticles((articles) => [...articles, ...data.articles]);
       setIsLoading(false);
     });
   }, []);

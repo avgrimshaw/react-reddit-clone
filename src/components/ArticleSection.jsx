@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import SelectedArticle from "./SelectedArticle.jsx/SelectedArticle";
 import { getArticleById } from "../api";
 import { Link, useParams } from "react-router-dom";
+import CommentsList from "./CommentsList";
 
 function ArticleSection() {
   const [isLoading, setIsLoading] = useState(true);
@@ -43,6 +44,7 @@ function ArticleSection() {
             comment_count={article.comment_count}
             article_id={article.article_id}
           />
+          <CommentsList article_id={article_id} />
         </div>
       )}
     </div>

@@ -37,6 +37,7 @@ function ArticleSection() {
           <SelectedArticle
             topic={article.topic}
             author={article.author}
+            body={article.body}
             created_at={article.created_at}
             title={article.title}
             image_url={article.article_img_url}

@@ -1,6 +1,7 @@
 function SelectedArticle({
   topic,
   author,
+  body,
   created_at,
   title,
   image_url,
@@ -24,6 +25,7 @@ function SelectedArticle({
       <div className="card-body">
         <h5 className="card-title">{title}</h5>
         <img className="card-img mt-2" src={image_url} alt="article" />
+        <p className="mt-2">{body}</p>
       </div>
       <ul className="nav nav-pills card-footer d-flex justify-content-between align-items-center">
         <li className="nav-item d-inline-flex align-items-center">

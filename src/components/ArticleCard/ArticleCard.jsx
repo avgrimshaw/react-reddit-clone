@@ -4,6 +4,7 @@ import "./ArticleCard.css";
 function ArticleCard({
   topic,
   author,
+  body,
   created_at,
   title,
   image_url,
@@ -31,6 +32,7 @@ function ArticleCard({
           <h5 className="card-title">{title}</h5>
         </Link>
         <img className="card-img mt-2" src={image_url} alt="article" />
+        <p className="text-truncate mt-2">{body}</p>
       </div>
       <ul className="card-footer nav nav-pills card-footer d-flex justify-content-between align-items-center">
         <li className="nav-item d-inline-flex align-items-center">

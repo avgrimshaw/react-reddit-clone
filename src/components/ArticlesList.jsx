@@ -24,6 +24,7 @@ function ArticlesList() {
               article_id,
               topic,
               author,
+              body,
               created_at,
               title,
               article_img_url,
@@ -35,6 +36,7 @@ function ArticlesList() {
                   key={article_id}
                   topic={topic}
                   author={author}
+                  body={body}
                   created_at={created_at}
                   title={title}
                   image_url={article_img_url}

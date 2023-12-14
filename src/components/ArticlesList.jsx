@@ -14,11 +14,11 @@ function ArticlesList() {
   }, []);
 
   return (
-    <>
+    <div className="d-flex flex-column align-items-center">
       {isLoading ? (
         <h2 className="text-center mt-5 fw-bold">LOADING ...</h2>
       ) : (
-        <div className="d-flex flex-column align-items-center">
+        <div className="d-flex flex-column align-items-center gap-4 mt-3">
           {articles.map(
             ({
               article_id,
@@ -40,13 +40,14 @@ function ArticlesList() {
                   image_url={article_img_url}
                   votes={votes}
                   comment_count={comment_count}
+                  article_id={article_id}
                 />
               );
             }
           )}
         </div>
       )}
-    </>
+    </div>
   );
 }
 

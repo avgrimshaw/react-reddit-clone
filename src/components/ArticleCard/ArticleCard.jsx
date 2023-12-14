@@ -15,7 +15,7 @@ function ArticleCard({
   const dateCreated = new Date(created_at);
 
   return (
-    <div className="card">
+    <div className="card" style={{ maxWidth: "700px" }}>
       <div className="card-header d-flex justify-content-between">
         <div className="d-flex gap-3">
           <span className="fw-bold" id="article-topic">
@@ -27,12 +27,14 @@ function ArticleCard({
           1hr ago
         </span>
       </div>
-      <div className="card-body">
+      <div className="card-body d-flex flex-column">
         <Link to={`/${topic}/${article_id}`}>
           <h5 className="card-title">{title}</h5>
         </Link>
         <img className="card-img mt-2" src={image_url} alt="article" />
-        <p className="text-truncate mt-2">{body}</p>
+        <p id="article-body-text" className="mt-3">
+          {body}
+        </p>
       </div>
       <ul className="card-footer nav nav-pills card-footer d-flex justify-content-between align-items-center">
         <li className="nav-item d-inline-flex align-items-center">

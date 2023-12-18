@@ -4,7 +4,7 @@ function LoginModal() {
   return (
     <div>
       <button
-        className="btn btn-primary"
+        className="btn bg-primary rounded-pill px-3 py-1 text-white fw-semibold"
         data-bs-toggle="modal"
         data-bs-target="#login-modal"
       >
@@ -24,7 +24,9 @@ function LoginModal() {
               ></button>
             </div>
             <div className="modal-body">
-              <UsersList />
+              <div className="d-flex flex-column align-items-center">
+                <UsersList />
+              </div>
             </div>
           </div>
         </div>

@@ -12,8 +12,9 @@ export const getArticleById = (article_id) => {
   return redditCloneApi.get(`/articles/${article_id}`).then(({ data }) => data);
 };
 
-export const patchArticleVotes = (article_id, votesBody) => {
-  return redditCloneApi.get(`/articles/${article_id}`, votesBody);
+export const patchArticleVotes = (article_id, vote) => {
+  console.log(vote);
+  return redditCloneApi.patch(`/articles/${article_id}`, vote);
 };
 
 export const getComments = (article_id) => {

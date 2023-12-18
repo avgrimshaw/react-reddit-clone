@@ -4,3 +4,8 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+.comments-link,
+.article-link {
+  text-decoration: none;
+}

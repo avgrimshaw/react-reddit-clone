@@ -8,22 +8,20 @@ function UsersList() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    if (users) return setIsLoading(false);
-  });
+    if (users.length === 0) return setIsLoading(false);
+  }, []);
 
   function handleOnClick(event) {
     const userIndex = event.target.id.match(/(\d)/)[0];
     getUsers().then((data) => {
-      console.log(data.users[userIndex]);
+      const user = data.users[userIndex];
+      user.login_status = true;
       setCurrentUser({
         ...currentUser,
-        ...data.users[userIndex],
-        login_status: true,
+        ...user,
       });
     });
   }
-
-  console.log(currentUser);
 
   return (
     <>
@@ -31,7 +29,10 @@ function UsersList() {
       {isLoading ? (
         <h3 className="text-center mt-5 fw-bold">LOADING ...</h3>
       ) : (
-        <div className="d-flex flex-wrap justify-content-between gap-3 mt-2">
+        <div
+          className="d-flex flex-wrap justify-content-between gap-3 mt-2"
+          style={{ maxWidth: "230px" }}
+        >
           {users.map((user, index) => {
             return (
               <div
@@ -57,7 +58,7 @@ function UsersList() {
                     alt={"Mr.Men Account" + user.name + ""}
                   />
                 </button>
-                <span className="text-center w-100">{user.name}</span>
+                <span className="text-center w-100">{user.username}</span>
               </div>
             );
           })}

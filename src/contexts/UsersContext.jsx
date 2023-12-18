@@ -15,6 +15,7 @@ export const UsersProvider = ({ children }) => {
   useEffect(() => {
     getUsers().then((data) => setUsers(data.users));
   }, []);
+
   return (
     <UsersContext.Provider value={{ users, currentUser, setCurrentUser }}>
       {children}
